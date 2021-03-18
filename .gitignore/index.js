@@ -42,7 +42,7 @@ fs.readdir("./Events/", (error, f) => {
 
 });
 
-client.login(token)
+client.login(process.env.TOKEN)
 
 client.on("message", async message => {
   if(message.content === "Salut" || message.content === "salut" || message.content === "Hey" || message.content === "hey" || message.content === "slt" || message.content === "Slt") {
