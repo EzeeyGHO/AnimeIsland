@@ -55,19 +55,3 @@ client.on("message", async message => {
     message.channel.send(message.guild.memberCount)
   }
 })
-
-client.on("message", async message => {
-  if(message.content.includes("https://discord.gg/")) {
-        if(!message.guild.channels.cache.get("818024721798397982")) {
-          message.delete()
-      const embed = new Discord.MessageEmbed()
-      .setAuthor(`❌ ${message.author.username} a publié une invitation !`)
-      .setColor("RED")
-      message.channel.send(embed)
-        } else {
-          return
-        }
-
-      
-  }
-})
